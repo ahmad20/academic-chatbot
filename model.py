@@ -1,14 +1,12 @@
-import os
-import openai
-import requests
-from langchain.document_loaders import (
+
+from langchain_community.document_loaders import (
     PyPDFLoader,
     YoutubeLoader
 )
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS
-from langchain.chat_models import ChatOpenAI
+from langchain_community.vectorstores import FAISS
+from langchain_community.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts.chat import (
     ChatPromptTemplate,
@@ -17,6 +15,10 @@ from langchain.prompts.chat import (
 )
 from dotenv import load_dotenv, find_dotenv
 from data import Data
+
+import os
+import openai
+import requests
 
 class DocumentProcessor:
     def __init__(self):
@@ -113,28 +115,3 @@ class DocumentProcessor:
 
     def _initialize_chat_model(self):
         return ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.2)
-
-    def _run_chat_chain(self, chat, query, docs_page_content):
-        template = """
-            Anda adalah asisten yang sangat membantu yang dapat menjawab pertanyaan tentang apapun yang ada didalam dokumen berdasarkan transkrip: {docs}
-            
-            Hanya gunakan informasi faktual dari dokumen, jangan gunakan opini Anda sendiri.
-            
-            Jika Anda merasa tidak tahu jawabannya, katakan saja "Saya tidak tahu".
-            
-            Jika pertanyaannya meminta untuk mencari informasi lewat internet, katakan saja "Silakan hubungi admin", dan berikan penjelasan bahwa apa yang anda ketahui hanya berdasarkan dokumen.
-            
-            Jawaban Anda harus singkat dan jelas.
-        """
-        system_message_prompt = SystemMessagePromptTemplate.from_template(template)
-
-        human_template = "Jawablah pertanyaan berikut ini: {question}"
-        human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
-
-        chat_prompt = ChatPromptTemplate.from_messages(
-            [system_message_prompt, human_message_prompt]
-        )
-
-        chain = LLMChain(llm=chat, prompt=chat_prompt)
-
-        return chain.run(question=query, docs=docs_page_content)
