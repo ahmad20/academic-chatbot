@@ -6,13 +6,8 @@ from langchain_community.document_loaders import (
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    SystemMessagePromptTemplate,
-    HumanMessagePromptTemplate,
-)
 from dotenv import load_dotenv, find_dotenv
 from data import Data
 
@@ -44,10 +39,8 @@ class DocumentProcessor:
     def save_to_db(self, docs):
         try:
             if self.is_vectorstores_empty():
-                print("Creating new vectorstore")
                 db = FAISS.from_documents(docs, self.embedding)
             else:
-                print("Appending to existing vectorstore")
                 db = FAISS.load_local("vectorstores", self.embedding)
                 new_db = FAISS.from_documents(docs, self.embedding)
                 db.merge_from(new_db)
@@ -81,9 +74,9 @@ class DocumentProcessor:
         self.data.set_data(document_path)
 
     @staticmethod
-    def download_pdf(url):
+    def download_pdf(url, target_path):
         filename = url.split("/")[-1]
-        filepath = f"temp/{filename}"
+        filepath = os.path.join(target_path, filename)
 
         if not str(url).endswith(".pdf"):
             raise Exception("URL does not point to a PDF file")

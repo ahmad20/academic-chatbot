@@ -1,5 +1,5 @@
 from langchain_openai import OpenAIEmbeddings
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import LLMChain
