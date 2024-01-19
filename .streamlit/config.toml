@@ -1,0 +1,3 @@
+[server]
+# Maximum 2 MB
+maxUploadSize = 2 
