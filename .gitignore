@@ -2,5 +2,3 @@ __pycache__/
 .env
 *env
 .devcotainer/
-temp/
-data.csv
