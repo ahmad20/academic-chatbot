@@ -5,7 +5,7 @@ from langchain_community.document_loaders import (
 )
 from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores.faiss import FAISS
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 from dotenv import load_dotenv, find_dotenv
