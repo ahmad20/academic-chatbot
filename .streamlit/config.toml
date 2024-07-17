@@ -1,0 +1,3 @@
+[server]
+# Maximum 10 MB
+maxUploadSize = 10

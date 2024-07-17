@@ -13,7 +13,7 @@ def main():
     if selected_tab == "Input":
         input_tab(t)
     elif selected_tab == "Chatbot":
-        chatbot_tab()
+        chatbot_tab(t)
 
 if __name__ == "__main__":
     main()
