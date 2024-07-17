@@ -101,10 +101,10 @@ def chatbot_tab(t: Tools):
         update_faiss_db(history_message)
         db = st.session_state['faiss_db']
         
-        docs = db.similarity_search(chat_prompt, k=4)
+        docs = db.similarity_search(query, k=4)
         docs_page_content = " ".join([doc.page_content for doc in docs])
-        msgs.add_user_message(chat_prompt)
-        st.chat_message("human").write(chat_prompt)
+        msgs.add_user_message(query)
+        st.chat_message("human").write(query)
         config = {"configurable": {"session_id": "any"}}
         response = chain.invoke({
             'question': query,
