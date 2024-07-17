@@ -15,11 +15,13 @@ def input_tab(t: Tools):
         except Exception as e:
             st.error(f"Error: {e}")
     
-    uploaded_file = st.file_uploader("Upload a file", type=["pdf"])
+    uploaded_file = st.file_uploader("Upload a file", type=["pdf", "json"])
     if st.button("Process Data", key="file_input"):
         try:
-            if uploaded_file:
+            if uploaded_file.type == "application/pdf":
                 t.process_pdf_file(uploaded_file)
+            elif uploaded_file.type == "application/json":
+                t.process_json_file(uploaded_file)
             else:
                 st.error("Please enter a valid input")
         except Exception as e:

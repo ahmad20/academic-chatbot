@@ -20,6 +20,18 @@ class Tools:
         self.model.create_db_from_document(save_path)
         os.remove(save_path)
         st.success("PDF successfully processed")
+    
+    def process_json_file(self, uploaded_file):
+        file_name = uploaded_file.name
+        save_path = os.path.join(self.temp_path, file_name)
+
+        # Save the file locally
+        with open(save_path, "wb") as f:
+            f.write(uploaded_file.getvalue())
+
+        self.model.create_db_from_json(save_path)
+        os.remove(save_path)
+        st.success("JSON successfully processed")
 
     def process_data(self, input_text: str):
         if input_text.endswith(".pdf"):
