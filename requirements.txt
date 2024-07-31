@@ -31,8 +31,8 @@ jupyter_client==8.6.0
 jupyter_core==5.7.1
 kiwisolver==1.4.5
 langchain==0.2.3
-langchain-community==0.2.4
 langchain-core==0.2.5
+langchain-openai==0.0.2.post1
 langchain-text-splitters==0.2.1
 langsmith==0.1.77
 Markdown==3.6
