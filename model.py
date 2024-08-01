@@ -3,16 +3,17 @@ from langchain_community.document_loaders import (
     PyPDFLoader,
     YoutubeLoader
 )
-from langchain_openai import OpenAIEmbeddings
+from langchain_community.embeddings import OpenAIEmbeddings  # Assuming this is the correct path
+from langchain_community.chat_models import ChatOpenAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.faiss import FAISS
-from langchain_openai import ChatOpenAI
+# from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 from dotenv import load_dotenv, find_dotenv
 from data import Data
 
 import os
-import openai
+# import openai
 import requests
 import json
 
@@ -26,8 +27,8 @@ from langchain_core.output_parsers import StrOutputParser
 class DocumentProcessor:
     def __init__(self):
         load_dotenv(find_dotenv())
-        self.embedding = OpenAIEmbeddings()
-        openai.api_key = os.environ['OPENAI_API_KEY']
+        self.embedding = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
+        # openai.api_key = os.environ['OPENAI_API_KEY']
         self.data = Data()
 
     def load_db(self):

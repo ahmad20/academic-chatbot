@@ -1,5 +1,7 @@
-from langchain_openai import OpenAIEmbeddings
-from langchain_openai import ChatOpenAI
+# from langchain_openai import OpenAIEmbeddings
+# from langchain_openai import ChatOpenAI
+from langchain_community.embeddings import OpenAIEmbeddings  # Assuming this is the correct path
+from langchain_community.chat_models import ChatOpenAI
 from langchain_community.vectorstores.faiss import FAISS
 from langchain.memory import ConversationBufferMemory
 # from langchain.chains import LLMChain
@@ -16,15 +18,16 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 from dotenv import load_dotenv, find_dotenv
-import os, time
-import openai
+import time
+# import openai
 import streamlit as st
 
 from tools import Tools
 
 def chatbot_tab(t: Tools):
     load_dotenv(find_dotenv())
-    openai.api_key = os.environ['OPENAI_API_KEY']
+    # self.embedding = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
+    # openai.api_key = os.environ['OPENAI_API_KEY']
     
     st.subheader("Chatbot Tab")
     
