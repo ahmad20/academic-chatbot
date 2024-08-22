@@ -32,7 +32,7 @@ class DocumentProcessor:
         self.data = Data()
 
     def load_db(self):
-        db = FAISS.load_local("vectorstores", self.embedding, allow_dangerous_deserialization=True)
+        db = FAISS.load_local("vectorstores", self.embedding, allow_dangerous_deserialization=True, index_type='IVF')
         return db
 
     @staticmethod

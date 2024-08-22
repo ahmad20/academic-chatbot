@@ -18,7 +18,7 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 from dotenv import load_dotenv, find_dotenv
-import time
+import os, time
 # import openai
 import streamlit as st
 
@@ -82,7 +82,7 @@ def chatbot_tab(t: Tools):
       
     # Initialize embedding and FAISS variables in session state
     if 'embedding' not in st.session_state:
-        st.session_state['embedding'] = OpenAIEmbeddings()
+        st.session_state['embedding'] = OpenAIEmbeddings(openai_api_key=os.environ['OPENAI_API_KEY'])
     if 'faiss_db' not in st.session_state:
         st.session_state['faiss_db'] = FAISS.load_local("vectorstores", st.session_state['embedding'], allow_dangerous_deserialization=True)
 
