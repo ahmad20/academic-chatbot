@@ -1,0 +1,7 @@
+- train with manual-transcript.json
+- calculate rouge score
+- prepare quisioner
+    - question with answer and give score kesesuaian
+- 
+
+langchain version previous: 0.0.13

@@ -4,3 +4,9 @@ __pycache__/
 .devcotainer/
 temp/
 data.csv
+*.png
+*.csv
+*.txt
+*.md
+*.json
+*.ipynb
