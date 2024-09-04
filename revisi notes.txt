@@ -1,0 +1,18 @@
+# revisi
+Catatan Pembimbing 1
+- cantumkan jenis pertanyaan yang tidak bisa dijawab oleh chatbot. (page:8, section:kesimpulan, paragraf:8)
+- buat pengkategorian pertanyaan. (page:7 dan 8, section:evaluasi, subsection: evaluasi manual dan hasil)
+- hitung berapa resource laptop yang dibutuhkan untuk satu user yang memparsing 38 mb. (page: 8, section: kesimpulan, par: 6)
+- hitung juga berapa dolar token yang bisa dihitung.(page: 8, section: kesimpulan, par:5)
+- Cantumkan penjelasan dokumen input secara eksplisit(page:4, praproses data dokumen)
+- limitasi aplikasi(page: 8, section: kesimpulan)
+- flow dari diagram diperbaiki(page:4(main flowchart), page:5(llm flochart), page:6(fine tuning flowchart))
+- nilai referensi dari relevansi perlu ditambahkan.(update referensi nomor 9)
+
+Catatan Pembimbing 2
+- Penjelasan tentang input dan output (dokumen akademik, wawancara, hasil 1, hasil 2). 
+- Jelaskan sumber data wawancara yang digunakan(page 5 awal, search: wawancara)
+- Jelaskan tantangan dalam implementasi misalnya: ada data noise atau tidak, kompleksitas data dll(page: 8, section:kesimpulan, par:4)
+- Pertanyaan yang digunakan dalam pengujian dapat dicoba dalam bentuk yang kompleks. Sehingga dapat dievaluasi bagaimana performansi sistem (page:7 dan 8, section:evaluasi, subsection: evaluasi manual dan hasil)
+- Setiap formula matematika diberikan penomeran dan disebutkan dalam teks.(page: 6 dan 7)
+- Jelaskan mengenai mekanisme pencarian jawaban oleh sistem(page: 5, section: fine-tuning, search: cosine similarity)
