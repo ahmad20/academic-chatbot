@@ -53,3 +53,47 @@ jelaskan otomatisasi proses youtube dan pdf, kenapa dulu pake youtueb sekarng en
 cari paper terbaru min.10
 
 bandingkan answer dan reference
+
+
+# daftar yudisium
+https://soc.telkomuniversity.ac.id/link-pengajuan-surat-ke-laak-fif/
+## dokumen yudisium
+- baca [docs](https://bit.ly/FIFDokKelengkapanYudisium)
+	- persetujuan revisi(done)
+	- pengesahan minta ttd kaprodi
+	- artefak: laporan, paper, poster, referensi, sourcecode, cv
+	- surat bebas pinjam
+		- upload ta(done)
+		- beli buku(done)
+	- bayar wisuda 1,502,500
+	- scan eprt
+	- scan TAK
+	- SKPI
+	- Biodata Ijazah
+	- KSM
+	- Bukti upload TA
+	- Cek similarity
+	- Poster
+
+## cek similarity
+- bukti upload openlib
+- paper
+
+
+- buat poster, baca [poster](https://telkomuniversityofficial-my.sharepoint.com/personal/laaksoc_365_telkomuniversity_ac_id/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Flaaksoc%5F365%5Ftelkomuniversity%5Fac%5Fid%2FDocuments%2F%5B07%5D%20DOKUMEN%20AKADEMIK%2FPanduan%2FPanduan%20Poster%2FDraft%5FFIF%5FPanduan%20Pembuatan%20Poster%2Epdf&parent=%2Fpersonal%2Flaaksoc%5F365%5Ftelkomuniversity%5Fac%5Fid%2FDocuments%2F%5B07%5D%20DOKUMEN%20AKADEMIK%2FPanduan%2FPanduan%20Poster&ga=1)
+
+## to-do
+- tanya pak kemas apakah revisi sudah fix atau belum (done)
+- upload ke openlib (tanya tentang kolomnya)
+	- Pedoman: [ig](https://www.instagram.com/p/CqsBqFiJnSj/?igsh=MWZlNXV0ODdpd2NxcQ%3D%3D&img_index=4)
+	- Pedoman: [openlib](https://openlibrary.telkomuniversity.ac.id/home/infografis.html)
+- cek similarity [form](https://forms.office.com/Pages/ResponsePage.aspx?id=D_6vkKPCCEG7mGzrTpTvFdEV-iq3_rVFrziCofIAXI1UMjJXNUI1ODgyWEtVUkxCM1hQWDE0M0YxUi4u)
+- beli buku dengan syarat:
+	- harga min 750000
+	- bukan fotocopy
+	- max 5 eksemplar di openlib
+
+
+to do
+- upload ke oplib -> ss -> buat 
+- cek similarity
