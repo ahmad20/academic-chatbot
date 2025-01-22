@@ -2,7 +2,7 @@ import streamlit as st
 from tools import Tools
 
 def input_tab(t: Tools):
-    st.subheader("Input Tab")
+    st.subheader("Input Tab | evident project untuk portofolio OpenAI")
     input_text = st.text_area("Enter URL (PDF or YouTube URL):", "")
 
     # Button to process data
