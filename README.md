@@ -57,7 +57,7 @@ To run this chatbot on your own:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/academic-chatbot.git
+git clone https://github.com/ahmad20/academic-chatbot.git
 cd academic-chatbot
 ```
 2. Install the required libraries:
